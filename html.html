@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+</head>
+<body>
+<script type="text/javascript">
+	var spiral = function (n) {
+  if (n===1) 
+  {
+    return [0, 1];
+  } 
+  else {
+    var s = spiral(n - 1);
+    s.push(s[s.length - 1] + s[s.length - 2]);
+    return s;
+  }
+};
+
+ 	document.write(spiral(20));
+</script>
+</body>
+</html>
